@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clinic Queue Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div><p class="eyebrow">CLINIC OPERATIONS</p><h1>Queue Manager</h1></div>
+    <span class="live"><i></i> Demo mode</span>
+  </header>
+  <main class="layout">
+    <section class="panel">
+      <h2>Register a patient</h2>
+      <form id="patientForm">
+        <label>Patient name<input id="name" required minlength="2" maxlength="60" placeholder="e.g. Asha Mehta" /></label>
+        <label>Age<input id="age" type="number" min="0" max="120" required placeholder="Age" /></label>
+        <label>Reason for visit<input id="reason" required maxlength="120" placeholder="e.g. General consultation" /></label>
+        <label>Priority<select id="priority"><option>Normal</option><option>Urgent</option></select></label>
+        <button type="submit">Add to queue</button>
+        <p id="formMessage" class="message" aria-live="polite"></p>
+      </form>
+    </section>
+    <section class="panel queue-panel">
+      <div class="queue-heading"><div><p class="eyebrow">TODAY'S VISITS</p><h2>Patient queue</h2></div><span id="count" class="count">0 patients</span></div>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search patient or reason…" />
+        <select id="filter"><option value="All">All priorities</option><option>Normal</option><option>Urgent</option></select>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Token</th><th>Patient</th><th>Reason</th><th>Priority</th><th>Action</th></tr></thead><tbody id="queueBody"></tbody></table></div>
+      <p id="empty" class="empty">No patients in the queue yet. Add the first patient using the form.</p>
+    </section>
+  </main>
+  <footer>Clinic Queue Manager · Browser-based practical exercise</footer>
+  <script src="app.js"></script>
+</body>
+</html>
