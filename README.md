@@ -1,5 +1,5 @@
 # Full Stack Development – Programming Exercise
-**Student:** Nikhil Sabhagani | **Roll No.:** 25  
+**Student:** Nikhil Ladwani | **Roll No.:** 25  
 **Programme:** B.E. (AI & DS), Semester V  
 **Project:** Clinic Queue Management
 
